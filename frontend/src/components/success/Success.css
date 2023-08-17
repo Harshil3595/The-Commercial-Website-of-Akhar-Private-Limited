@@ -1,0 +1,38 @@
+.orderSuccess {
+    margin: auto;
+    text-align: center;
+    padding: 10vmax;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .orderSuccess > svg {
+    font-size: 7vmax;
+  }
+  .orderSuccess > p {
+    font-size: 2vmax;
+  }
+  .orderSuccess > a {
+    font-size: 1vmax;
+    padding: 1vmax 3vmax;
+    margin: 2vmax;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .orderSuccess > a {
+      padding: 3vw 6vw;
+      font-size: 4vw;
+      margin: 2vmax;
+    }
+  
+    .orderSuccess > svg {
+      font-size: 20vw;
+    }
+    .orderSuccess > p {
+      margin: 2vmax;
+      font-size: 5vw;
+    }
+  }
+  

@@ -1,0 +1,54 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+}
+
+.productListContainer {
+  flex: 1;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10vh;
+}
+
+#productListHeading {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.637);
+  transition: all 0.5s;
+  margin: 2rem;
+  text-align: center;
+}
+
+.productListTable {
+  background-color: white;
+  border: none !important;
+}
+
+.scrollableTableContainer {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.scrollableTableContainer::-webkit-scrollbar {
+  width: 5px; 
+}
+
+.scrollableTableContainer::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}
+
+.scrollableTableContainer::-webkit-scrollbar-thumb {
+  background-color: #888; 
+}
+
+.custom-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
