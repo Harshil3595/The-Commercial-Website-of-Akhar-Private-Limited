@@ -1,0 +1,42 @@
+body {
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer {
+  width: 100%; /* Set the width of the footer to 100% */
+  background-color: #23242a;
+  color: white; /* Set text color to white */
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Additional styles for the table in the footer */
+footer table {
+  background-color: #23242a; /* Match the footer's background color */
+}
+
+footer table th,
+footer table td {
+  color: white; /* Set text color to white */
+}
+
+.custom-footer .btn-floating {
+  background-color: transparent;
+  margin-right: 10px;
+  border: none; /* Remove the border */
+}
+
+.custom-footer .btn-floating:hover {
+  background-color: transparent; /* Set the background color to transparent on hover */
+}
+.custom-table {
+  background-color: #23242a; /* Set the background color to black */
+  color: white; /* Set the font color to white */
+}

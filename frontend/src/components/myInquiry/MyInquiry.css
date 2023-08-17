@@ -1,0 +1,29 @@
+.myinquirys{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+/* MyInquiry.css */
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .status-pending {
+    background-color: #007bff; 
+    color: white;
+  }
+  
+  .status-processing {
+    background-color: #ffc107; 
+    color: black;
+  }
+  
+  .status-done {
+    background-color: #28a745;
+    color: white;
+  }
+  
