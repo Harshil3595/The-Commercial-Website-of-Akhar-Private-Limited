@@ -93,7 +93,7 @@ function Home() {
           </div>
         )}
       </>
-      <div className="container my-4">
+      {/* <div className="container my-4">
                 <h1 style={{ fontFamily: 'Georgia', textAlign: 'center' }}>Clients</h1>
                 <div className="row justify-content-center">
                     {clients && clients.map((client, index) => (
@@ -106,7 +106,7 @@ function Home() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
     </>
   )
 }

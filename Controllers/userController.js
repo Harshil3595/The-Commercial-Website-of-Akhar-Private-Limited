@@ -8,23 +8,44 @@ const crypto = require("crypto");
 const sendToken=require('../middlewares/sendToken')
 
 const registerController = async (req, res) => {
-  const exitingUser = await User.findOne({ email: req.body.email });
-  if (exitingUser) {
-    return res.status(404).send({
+  try {
+    const existingUser = await User.findOne({ email: req.body.email });
+    if (existingUser) {
+      return res.status(409).send({
+        success: false,
+        message: "User already exists"
+      });
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashPassword = await bcrypt.hash(req.body.password, salt);
+    req.body.password = hashPassword;
+
+    const user = new User(req.body);
+    await user.save();
+
+   
+    const tokenPayload = {
+      userId: user._id,
+      name: user.name
+    };
+    const secretKey = process.env.JWT_SECRET;
+    const token = jwt.sign(tokenPayload, secretKey);
+
+    return res.status(201).send({
+      success: true,
+      message: "User registered successfully...",
+      user,
+      token
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send({
       success: false,
-      message: "User already exits"
-    })
+      message: "An error occurred during registration"
+    });
   }
-
-  //hash password
-  const salt = await bcrypt.genSalt(10);
-  const hashPassword = await bcrypt.hash(req.body.password, salt);
-  req.body.password = hashPassword;
-
-  const user = new User(req.body);
-  await user.save();
-  return res.status(201).send({ success: true, message: "User Register succefully...", user });
-}
+};
 
 const loginController = async (req, res) => {
   const user = await User.findOne({ email: req.body.email });

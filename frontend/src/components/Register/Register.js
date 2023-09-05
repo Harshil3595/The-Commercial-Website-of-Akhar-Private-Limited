@@ -18,7 +18,6 @@ function Register() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    console.log(name,email,password);
 
     const userData = new FormData();
     userData.append('name', name);
@@ -35,13 +34,12 @@ function Register() {
   const {error,isAuthenticated,loading}=useSelector((state)=>state.user);
   
   useEffect(()=>{
-   if(error){
-    toast.success("User already exit", {
-      className: 'custom-toast-success',
-    });
-   }
-
-
+  //  if(error){
+  //   toast.success("User already exit", {
+  //     className: 'custom-toast-success',
+  //   });
+  //  }
+  
      if(isAuthenticated){
       toast.success('User Register Succesfully!', {
         className: 'custom-toast-success',
@@ -65,9 +63,9 @@ function Register() {
            </div>
            <div class="intro-section-footer">
              <na class="footer-nav">
-               <a href="#!">Facebook</a>
-               <a href="#!">Twitter</a>
-               <a href="#!">Gmail</a>
+             <a href="#!">Facebook</a>
+              <a href="#!">Twitter</a>
+              <a href="mailto:akshar.info.yash@gmail.com?subject=Default%20Inquiry">Gmail</a>
              </na>
            </div>
          </div>

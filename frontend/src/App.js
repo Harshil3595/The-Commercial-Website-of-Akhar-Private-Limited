@@ -11,7 +11,6 @@ import Register from './components/Register/Register';
 import store from './store';
 import { useEffect } from 'react';
 import { loadUser } from './actions/userAction';
-import Profile from './components/Login/Profile'; 
 import Dashboard from './components/Admin/DashBoard';
 import Services from './components/Admin/Services';
 import InquirysList from './components/Admin/InquirysList';
@@ -51,7 +50,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/account" element={<Profile />} />
           <Route path="/success" element={<Success />} />
           <Route path="/password/forgot" element={<ForgotPassword />} />
           <Route path="/password/reset/:token" element={<ResetPassword />} />

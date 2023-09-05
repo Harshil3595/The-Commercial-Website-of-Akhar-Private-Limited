@@ -137,6 +137,10 @@ export const register = (userData) => async (dispatch) => {
 
     const { data } = await axios.post("http://localhost:5000/api/auth/register", userData, config);
 
+    const token = data.token;
+
+    localStorage.setItem("token", token);
+
     dispatch({ type: REGISTER_USER_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -294,6 +298,8 @@ export const updateStatus = (id, status) => async (dispatch) => {
     dispatch({ type: UPDATE_INQUIYT_REQUEST });
 
     const token = localStorage.getItem("token");
+
+    console.log("id from updat eis",id);
 
     const config = {
       headers: {

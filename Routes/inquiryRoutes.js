@@ -1,7 +1,6 @@
 const express=require('express');
 const { inquiryController, getAllInquiryController, getMyInquirysController, getAllInquiryForDisplay } = require('../Controllers/inquiryController');
 const verifyToken = require('../middlewares/verifyToken');
-const singleUpload = require('../middlewares/multer');
 const authorizedRoles = require('../middlewares/checkroles');
 
 const router=express.Router();

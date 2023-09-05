@@ -34,12 +34,6 @@ function Login() {
       });
       navigate('/')
     }
-
-    if(error){
-      toast.success(error, {
-        className: 'custom-toast-success',
-      });
-    }
   },[dispatch,error,isAuthenticated,navigate,loading])
 
   return (
@@ -54,7 +48,7 @@ function Login() {
             <na className="footer-nav">
               <a href="#!">Facebook</a>
               <a href="#!">Twitter</a>
-              <a href="#!">Gmail</a>
+              <a href="mailto:akshar.info.yash@gmail.com?subject=Default%20Inquiry">Gmail</a>
             </na>
           </div>
         </div>

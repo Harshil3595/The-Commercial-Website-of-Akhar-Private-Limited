@@ -60,11 +60,20 @@ function Footer() {
                 <span className="ms-2">Modasa, Gujarat,India</span>
               </li>
               <li className="mb-3">
-                <span className="fa-li">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                <span className="ms-2">akshar.info.yash@gmail.com</span>
+                <a
+                  href="mailto:akshar.info.yash@gmail.com?subject=Default%20Inquiry"
+                  style={{
+                    textDecoration: "none", 
+                    color: "inherit",
+                  }}
+                >
+                  <span className="fa-li">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </span>
+                  <span className="ms-2">akshar.info.yash@gmail.com</span>
+                </a>
               </li>
+
               <li className="mb-3">
                 <span className="fa-li">
                   <FontAwesomeIcon icon={faPhone} />
@@ -85,16 +94,8 @@ function Footer() {
             <table className="table table-dark text-center">
               <tbody className="font-weight-normal">
                 <tr>
-                  <td>Mon - Thu:</td>
+                  <td>Mon - Sat</td>
                   <td>8am - 9pm</td>
-                </tr>
-                <tr>
-                  <td>Fri - Sat:</td>
-                  <td>8am - 1am</td>
-                </tr>
-                <tr>
-                  <td>Sunday:</td>
-                  <td>9am - 10pm</td>
                 </tr>
               </tbody>
             </table>

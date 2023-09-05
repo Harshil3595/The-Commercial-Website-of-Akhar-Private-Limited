@@ -33,7 +33,7 @@ const UpdateStatus = () => {
       });
       dispatch(sendEmailWithStatus(user.email,updatedData.status));
       dispatch({ type: UPDATE_INQUIYT_RESET });
-      navigate('/admin/inquirys'); // Redirect to the specified path
+      navigate('/admin/inquirys'); 
     }
   }, [success, dispatch, navigate]);
 

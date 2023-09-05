@@ -62,7 +62,6 @@ const clientController = async(req,res) => {
       .json({ success: false, message: "No file was uploaded" });
   }
 
-  console.log("file is",file);
 
   cloudinary.uploader.upload(file.tempFilePath, async (err, result) => {
     if (err) {

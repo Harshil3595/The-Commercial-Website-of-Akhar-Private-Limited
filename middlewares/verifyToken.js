@@ -7,7 +7,6 @@ const verifyToken = (req, res, next) => {
     return res.status(401).send({ success: false, message: 'No token provided' });
   }
 
-  // Check if the token starts with "Bearer " and extract the token value
   const tokenValue = token.startsWith('Bearer ') ? token.split(' ')[1] : token;
 
   jwt.verify(tokenValue, 'Harshil', (err, decoded) => {

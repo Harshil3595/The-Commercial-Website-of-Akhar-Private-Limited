@@ -37,7 +37,7 @@ const Dashboard = () => {
               <p>Inquiries</p>
               <p className="my-3">{inquiryCount}</p>
             </Link>
-            <Link to="/admin/services">
+            <Link to="/">
               <p>Services</p>
               <p className="my-3">{serviceCount}</p>
             </Link>
